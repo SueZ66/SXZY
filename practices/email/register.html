@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>点击切换和自动切换选项卡</title>
+    <link rel="stylesheet" href="css/注册校验.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<div class="tab1" id="tab1">
+    <div class="menu">
+        <ul>
+            <li id="one1" onclick="setTab('one',1)">注册手机邮箱</li>
+            <li id="one2" onclick="setTab('one',2)">注册字母邮箱</li>
+        </ul>
+    </div>
+    <div class="menudiv"  style="height: 430px;">
+        <!--注册手机邮箱-->
+        <form id="con_one_1" style="display:none;height: 430px;">
+            <div class="=myTitle" style="margin-left: 10px;">
+                <div class="WordTtle">手机号码</div>
+                <input type="text" id="phoneNumber" class="informationInput">
+                <div class="promptWord">忘记密码时，可以通过该手机号码快速找回密码</div>
+            </div>
+
+            <div class="myTitle">
+                <div class="WordTtle">密码</div>
+                <input type="text" id="registerPassword" class="informationInput">
+                <div class="promptWord">6~16个字符，区分大小写</div>
+            </div>
+
+            <div class="myTitle">
+                <div class="WordTtle">确认密码</div>
+                <input type="text" id="submitPassword" class="informationInput">
+                <div class="promptWord">请再次填写密码</div>
+            </div>
+
+
+            <div class="agreeServe"><input type="radio" name="radio" value="同意"> 同意"服务条款"和"隐私权相关政策"</div>
+            <input type="button"  value="立即注册" id="registerNow">
+        </form>
+
+        <!--注册字母邮箱-->
+        <form action="" id="user_login" id="myform">
+            <div class="myTitle">
+                <div class="WordTtle">邮件地址</div>
+                <input type="text" id="emailAddressInput2" class="informationInput">
+                <span>@</span>
+                <select name="136.com" id="tailSelect2">
+                    <option value="163.com" title="selected">163.com</option>
+                    <option value="126.com">126.com</option>
+                    <option value="yeah.net">yeah.net</option>
+                </select>
+                <div class="promptWord">6~18个字符，可使用字母、数字、下划线，需以字母开头</div>
+            </div>
+            <div class="myTitle">
+                <div class="WordTtle">密码</div>
+                <input type="password" id="registerPassword2" class="informationInput">
+                <div class="promptWord">6~16个字符，区分大小写</div>
+            </div>
+
+            <div class="myTitle">
+                <div class="WordTtle">确认密码</div>
+                <input type="password" id="submitPassword2" class="informationInput">
+                <div class="promptWord">请再次填写密码</div>
+            </div>
+
+            <div class="=myTitle" style="margin-left: 10px;">
+                <div class="WordTtle">手机号码</div>
+                <input type="text" id="phoneNumber2" class="informationInput">
+                <div class="promptWord">忘记密码时，可以通过该手机号码快速找回密码</div>
+            </div>
+            <div class="agreeServe"><input type="radio" name="radio" value="同意" id="agree"> 同意"服务条款"和"隐私权相关政策"</div>
+            <input type="button"  value="立即注册" id="registerNow2">
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    function setTab(name, cursel) {
+        cursel_0 = cursel;
+        for (var i = 1; i <= links_len; i++) {
+            var menu = document.getElementById(name + i);
+            var menudiv = document.getElementById("con_" + name + "_" + i);
+            if (i == cursel) {
+                menu.className = "off";
+                menudiv.style.display = "block";
+            }
+            else {
+                menu.className = "";
+                menudiv.style.display = "none";
+            }
+        }
+    }
+
+    function Next() {
+        cursel_0++;
+        if (cursel_0 > links_len) cursel_0 = 1
+        setTab(name_0, cursel_0);
+    }
+
+    var name_0 = 'one';
+    var cursel_0 = 1;
+    var ScrollTime=300000;//循环周期（毫秒）
+    var links_len, iIntervalId;
+    onload = function () {
+        var links = document.getElementById("tab1").getElementsByTagName('li')
+        links_len = links.length;
+        for (var i = 0; i < links_len; i++) {
+            links[i].onmouseover = function () {
+                clearInterval(iIntervalId);
+                this.onmouseout = function () {
+                    iIntervalId = setInterval(Next, ScrollTime);
+                    ;
+                }
+            }
+        }
+        document.getElementById("con_" + name_0 + "_" + links_len).parentNode.onmouseover = function () {
+            clearInterval(iIntervalId);
+            this.onmouseout = function () {
+                iIntervalId = setInterval(Next, ScrollTime);
+                ;
+            }
+        }
+        setTab(name_0, cursel_0);
+        iIntervalId = setInterval(Next, ScrollTime);
+    }
+</script>
+<script src="js/submit.js"></script>
+</body>
+</html>

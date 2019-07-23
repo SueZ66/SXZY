@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>点击切换和自动切换选项卡</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+</head>
+<body>
+
+    <div class="tab1" id="tab1">
+        <div class="menu">
+            <ul>
+                <li id="one1" onclick="setTab('one',1)">二维码登录</li>
+                <li id="one2" onclick="setTab('one',2)">邮箱登录</li>
+            </ul>
+        </div>
+        <div class="menudiv">
+            <!--二维码登录-->
+            <div id="con_one_1" style="display:none;">
+                <div class="qrcode-Ftitle"><strong>网易邮箱大师</strong>手机版扫描登录</div>
+                <div class="qrcode-Ttitle">官方App更安全 <a href="">立即下载</a></div>
+                <div class="photo_qrcode"><img src="img/qrcode.png" alt="" width="100px"></div>
+                <div>
+                    <div class="photo_pc"><img src="img/pc.png" alt="" width="70px"></div>
+                    <div class="qrword">
+                        <div>网易邮箱大师电脑版</div>
+                        <div>登录更便捷，工作更高效</div>
+                    </div>
+                </div>
+            </div>
+            <!--邮箱账号登录-->
+            <form action="" id="user_login">
+                <div id="con_one_2" class="emaillogin">
+                    <div class="logincentent">邮箱</div>
+                    <input type="text" placeholder="邮箱账号或手机号" class="formcontent"  name="" id="accountName">
+                    <div class="logincentent">密码</div>
+                    <input type="text" placeholder="请输入密码"  class="formcontent"  name="password" id="password">
+                    <div class="forgetpassword">
+                        <div class="miandenglu"><input type="radio" name="radio" value="密码">十天内免登陆</div>
+                        <div style="display: inline-block;">忘记密码？</div>
+                    </div>
+                    <div class="formbuttom">
+                        <input id="loginbutton" type="button"  value="登录" >
+                        <a href="register.html"><input class="registerbutton" type="button" value="去注册"></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+<script type="text/javascript">
+    function setTab(name,cursel){
+        cursel_0=cursel;
+        for(var i=1; i<=links_len; i++){
+            var menu = document.getElementById(name+i);
+            var menudiv = document.getElementById("con_"+name+"_"+i);
+            if(i==cursel){
+                menu.className="off";
+                menudiv.style.display="block";
+            }
+            else{
+                menu.className="";
+                menudiv.style.display="none";
+            }
+        }
+    }
+    function Next(){
+        cursel_0++;
+        if (cursel_0>links_len)cursel_0=1
+        setTab(name_0,cursel_0);
+    }
+    var name_0='one';
+    var cursel_0=1;
+            var ScrollTime=3000000;//循环周期（毫秒）
+    var links_len,iIntervalId;
+    onload=function(){
+        var links = document.getElementById("tab1").getElementsByTagName('li')
+        links_len=links.length;
+        for(var i=0; i<links_len; i++){
+            links[i].onmouseover=function(){
+                clearInterval(iIntervalId);
+                this.onmouseout=function(){
+                    iIntervalId = setInterval(Next,ScrollTime);;
+                }
+            }
+        }
+        document.getElementById("con_"+name_0+"_"+links_len).parentNode.onmouseover=function(){
+            clearInterval(iIntervalId);
+            this.onmouseout=function(){
+                iIntervalId = setInterval(Next,ScrollTime);;
+            }
+        }
+        setTab(name_0,cursel_0);
+        iIntervalId = setInterval(Next,ScrollTime);
+    }
+</script>
+<!--<script src="js/checkpassword.js"></script>-->
+    <script src="js/usesjson.js"></script>
+</body>
+</html>
