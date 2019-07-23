@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+	<style>
+		span,select {
+			line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<h1>添加新员工</h1>
+	<form action="#">
+		<span>员工姓名：</span><input type="text"><br>
+		<span>初始密码：</span><input type="password"><br>
+		<span>状态：</span><input type="radio" name="state" value="onjob" checked>在职<input type="radio" name="state" value="offjob">离职<br>
+		<span>员工等级：</span><select name="level" id="">
+			<option value="lv1">门店-实习生</option>
+			<option value="lv2">门店-正式工</option>
+		</select><br>
+		<span>角色：</span><select name="role" id="">
+			<option value="manager">经理</option>
+			<option value="staff">员工</option>
+		</select><br>
+		<span>部门：</span><select name="department" id="">
+			<option value="salesroom">门市部</option>
+			<option value="personnal">人事部</option>
+		</select><br>
+		<span>性别：</span><input type="radio" name="sex" value="male">男<input type="radio" name="sex" value="female" checked>女<br>
+		<span>住址：</span><input type="text"><br>
+		<span>电话：</span><input type="text"><br>
+		<span>所属店铺：</span><select name="address" id="">
+			<option value="zunyi">遵义体验店</option>
+			<option value="wuchang">武昌体验店</option>
+		</select><br>
+		<span>电子邮箱：</span><input type="text"><br>
+		<input type="submit">
+	</form>
+</body>
+</html>

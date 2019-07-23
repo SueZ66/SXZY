@@ -1,0 +1,30 @@
+.clearfix:before,
+.clearfix:after{
+    content:" ";
+    display:table;
+}
+
+.clearfix:after{
+    clear:both;
+}
+footer {
+	margin: 0 auto 20px auto;
+	width: 1200px;
+}
+footer div {
+	width: 120px;
+	margin-right: 120px;
+	float: left;
+	color: #777;
+}
+div span {
+	font-size: 24px;
+}
+div ul {
+	font-size: 16px;
+	line-height: 20px;
+	margin-top: 18px;
+}
+div li:hover {
+	color: #aaa;
+}

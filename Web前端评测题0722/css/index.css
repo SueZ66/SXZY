@@ -1,0 +1,34 @@
+h1 {
+	font-size: 32px;
+	line-height: 40px;
+	font-family: 宋体;
+	font-weight: bold;
+}
+h3 {
+	font-size: 18px;
+	line-height: 20px;
+}
+.book:before {
+	content: "<<";
+}
+.book:after {
+	content: ">>";
+}
+.headline {
+	margin: 20px 0;
+}
+.head {
+	font-family: 宋体;
+	font-weight: bold;
+}
+.name {
+	font-weight: bold;
+}
+.price {
+	color: red;
+}
+.method {
+	text-decoration: underline;
+	font-style: italic;
+	margin-bottom: 5px;
+}
