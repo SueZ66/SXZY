@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+	<div class="container">
+		<div class="title">系统登录</div>
+		<div class="input">
+			<div>
+				<span>用户名:</span>
+				<input type="text" placeholder="请输入您的用户名!">
+			</div>
+			<div>
+				<span>密&nbsp;码:</span>
+				<input type="password" placeholder="请输入您的登录密码！">
+			</div>
+		</div>
+		<div class="button">
+			<button>登录</button>
+			<button>重置</button>
+			<span onclick="popUp()">注册账户</span>
+		</div>
+	</div>
+	<div id="poping" class="poping">
+		<div class="popWrapper">
+			<div class="close" onclick="popOff()">
+				<svg class="icon-cha" aria-hidden="true">
+				    <use xlink:href="#icon-cha"></use>
+				</svg>
+			</div>
+			<div class="popTitle">
+				<svg class="icon-ma" aria-hidden="true">
+				    <use xlink:href="#icon-ma"></use>
+				</svg>					
+				<span>用户注册</span>
+			</div>
+			<div class="popInput">
+				<div>
+					<span>用 户 名：</span><input type="text" placeholder="请输入您的用户名！" class="inputbox">
+				</div>
+				<div>
+					<span>密&nbsp;&nbsp;码：</span><input type="password" placeholder="请输入您的密码！" class="inputbox">
+				</div>
+				<div>
+					<span>再次输入：</span><input type="password" placeholder="请输入您的密码！" class="inputbox">
+				</div>
+				<div>
+					<span>性&nbsp;&nbsp;别：</span><input type="radio" checked>男<input type="radio">女
+				</div>
+				<div>
+					<span>职&nbsp;&nbsp;业：</span><select name="career" id="" class="inputbox">
+						<option value="">学生</option>
+						<option value="">老师</option>
+						<option value="">经理</option>
+					</select>
+				</div>
+				<div>
+					<span>自我介绍：</span><textarea name="" id="" cols="30" rows="6" style="width: 330px;box-sizing: border-box;"></textarea>
+				</div>
+			</div>
+			<div class="popButton">
+				<button>注册</button>
+				<button>重置</button>
+				<span onclick="popOff()">已有账户</span>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">CopyRight&copy;Suez66版权所有</div>
+</body>
+<script>
+	function popUp() {
+		let popfloor = document.getElementById("poping").style;
+		console.log(popfloor);
+		poping.style.display="block";
+	}
+	function popOff() {
+		let popfloor = document.getElementById("poping").style;
+		console.log(popfloor);
+		poping.style.display="none";
+	}
+</script>
+<script src="./src/iconfont.js"></script>
+</html>
