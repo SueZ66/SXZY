@@ -105,16 +105,16 @@ section {
 .wrapper {
 	padding: 21px 25px;
 }
-.banner {
+.banner1 {
 	position: relative;
 	width: 1150px;
 	height: 350px;
 }
-.banner img {
+.banner1 img {
 	width: 100%;
 	height: 100%;
 }
-.banner div {
+.banner1 div {
 	top: 43px;
 	right: 200px;
 	background: #ededed73;
@@ -124,6 +124,149 @@ section {
 	padding: 20px 10px;
 	position: absolute;
 	writing-mode: vertical-rl;
+}
+.menu {
+	width: 1170px;
+	margin-bottom: 25px;
+	margin-left: -20px;
+}
+.menu-item {
+	float: left;
+	width: 370px;
+	margin-left: 20px;
+}
+.menu-item h1 {
+	margin: 15px 0;
+	font-size: 22px;
+	line-height: 40px;
+	font-family: "楷体";
+	font-weight: bold;
+}
+.menu-item p {
+	line-height: 22px;
+	font-size: 16px;
+	color: #777;
+}
+.menu-item div {
+	margin-top: 28px;
+	display: inline-block;
+	padding: 10px 12px;
+	background: #ededed;
+	cursor: pointer;
+}
+.menu-item div:hover {
+	background: #f1f1f1;
+	color: #777;
+}
+.banner2 {
+	position: relative;
+	width: 1150px;
+	height: 200px;
+}
+.banner2 img {
+	width: 100%;
+	height: 100%;
+}
+.container {
+	margin-top: 25px;
+	width: 1150px;
+}
+.content {
+	float: left;
+	width: 750px;
+}
+.content-item:not(:first-child) {
+	margin-top: 12px;
+}
+.content-item h1 {
+	margin-bottom: 10px;
+	font-size: 20px;
+	line-height: 40px;
+	font-family: "楷体";
+	font-weight: bold;
+}
+.content-item p {
+	width: 550px;
+	margin-left: 30px;
+	float: left;
+	line-height: 22px;
+	font-size: 16px;
+	color: #777;
+}
+.content-item span {
+	width: 170px;
+	height: 170px;
+	float: left;
+}
+.content-item img {
+	width: 100%;
+	height: 100%;
+}
+.content-item div {
+	margin-left: 30px; 
+	margin-top: 28px;
+	display: inline-block;
+	padding: 10px 12px;
+	background: #ededed;
+	cursor: pointer;
+}
+.content-item div:hover {
+	background: #f1f1f1;
+	color: #777;
+}
+.rightside1 {
+	width: 375px;
+	margin-left: 25px;
+	float: left;
+}
+.rightside1 h1 {
+	margin-bottom: 10px;
+	font-size: 20px;
+	line-height: 40px;
+	font-family: "楷体";
+	font-weight: bold;
+}
+.rightside1 li {
+	font-size: 16px;
+	padding: 8px 0;
+	color: #BA3846;
+	line-height: 26px;
+	border-bottom: 1px solid #999;
+	cursor: pointer;
+}
+.rightside1 li:hover {
+	color: #ef929c;
+}
+.rightside2 {
+	width: 375px;
+	margin-top: 20px;
+	margin-left: 25px;
+	float: left;
+}
+.rightside2 h1 {
+	margin-bottom: 10px;
+	font-size: 20px;
+	line-height: 40px;
+	font-family: "楷体";
+	font-weight: bold;
+}
+.rightside2 li {
+	line-height: 22px;
+	margin: 22px 0;
+	color: #777;
+	cursor: pointer;
+}
+.rightside2 li:hover {
+	color: #aaa;
+}
+.rightside2 li:last-child {
+	margin-bottom: 10px;
+}
+.rightside2 li h2 {
+	font-size: 15px;
+}
+.rightside2 li p {
+	font-size: 16px;
 }
 /*-------
 footer
