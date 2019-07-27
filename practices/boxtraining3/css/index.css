@@ -1,0 +1,157 @@
+/*-------
+clearfix
+-------*/
+.clearfix:before,
+.clearfix:after{
+    content:" ";
+    display:table;
+}
+
+.clearfix:after{
+    clear:both;
+}
+/*-------
+body
+-------*/
+.block {
+	margin-bottom: 50px;
+}
+.block h1 {
+	padding: 8px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #777;
+}
+.box1 {
+	width: 250px;
+	box-sizing: border-box;
+	margin: 8px 0 0 8px;
+	border: 1px solid #E4E4E4;
+}
+.title {
+	border-bottom: 1px dotted;
+	padding: 9px 14px;
+	box-sizing: border-box;
+}
+.title h2 {
+	float: left;
+	font-size: 16px;
+	line-height: 16px;
+	color: #666;
+}
+.title span {
+	float: right;
+	font-size: 12px;
+	line-height: 16px;
+	color: #666;
+	cursor: pointer;
+}
+.title span:after {
+	content: " >";
+}
+.box1 ul {
+	margin: 6px 0 7px 14px;
+}
+.box1 ul li {
+	font-size: 12px;
+	line-height: 22px;
+	color: #666666;
+	cursor: pointer;
+}
+.box1 li span {
+	padding-right: 6px;
+	font-weight: bold;
+}
+
+.box2 {
+	width: 1263px;
+	height: 711px;
+	padding: 0 157px 131px 132px;
+	background: #f0f0f0;
+	box-sizing: border-box;
+}
+.box2-1 {
+	width: 272px;
+	height: 111px;
+	margin-right: 0 33px 0 0;
+	background: #00ffff;
+	float: left;
+}
+.box2-2 {
+	width: 63px;
+	height: 23px;
+	margin: 11px 4px 3px 0;
+	background: #00ffff;
+	float: right;
+}
+.box2-3 {
+	width: 664px;
+	height: 32px;
+	margin: 0 0 42px 0;
+	background: #ffbfbf;
+	float: right;
+}
+.box2-4 {
+	width: 306px;
+	height: 428px;
+	margin: 0 13px 15px 0;
+	background: #ffbfbf;
+	float: left;
+}
+.box2-5 {
+	width: 972px;
+	height: 26px;
+	background: #00ffff;
+	float: left;
+}
+.box2-6 {
+	width: 429px;
+	float: left;
+	margin: 0 34px 7px 0;
+}
+.box2-6-1 {
+	width: 429px;
+	height: 245px;
+	background: #00ffff;
+	float: left;
+}
+.box2-6-2 {
+	width: 429px;
+	height: 115px;
+	margin: 1px 0 0 0;
+	background: #ffbfbf;
+	float: left;
+}
+.box2-6-3 {
+	width: 429px;
+	height: 34px;
+	margin: 8px 0 0 0;
+	background: #00ffff;
+	float: left;
+}
+.box2-9 {
+	width: 633px;
+	height: 25px;
+	background: #BFFFBF;
+	float: left;
+}
+.box2-a {
+	width: 190px;
+	height: 247px;
+	background: #BFFFBF;
+	float: left;
+}
+.box2-b {
+	width: 188px;
+	height: 27px;
+	margin: 2px 0 21px 0;
+	background: #00ffff;
+	float: left;
+}
+.box2-c {
+	width: 188px;
+	height: 96px;
+	margin: 0 4px 16px 0;
+	background: #ffbfbf;
+	float: left;
+}
