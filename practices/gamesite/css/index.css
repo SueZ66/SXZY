@@ -1,0 +1,350 @@
+/*-------
+clearfix
+-------*/
+.clearfix:before,
+.clearfix:after{
+    content:" ";
+    display:table;
+}
+
+.clearfix:after{
+    clear:both;
+}
+/*-------
+body
+-------*/
+body {
+	width: auto;
+}
+li {
+	cursor: pointer;
+}
+/*-------
+header
+-------*/
+header {
+	width: 100%;
+	background: #191D3A;
+}
+.headerWrapper {
+	margin: 0 auto;
+	width: 1000px;
+	height: 59px;
+}
+.logo {
+	float: left;
+	box-sizing: border-box;
+	padding: 10px 48px 12px 20px;
+}
+.logo img {
+	width: 157px;
+	height: 35px;
+}
+.navbar {
+	float: left;
+	height: 59px;
+}	
+.navbarli:hover {
+	background: #252947;
+	color: #e2e4ed;
+}
+.navbarli {
+	float: left;
+	margin: 0;
+	width: 85px;
+	line-height: 59px;
+	color: #999;
+	font-size: 14px;
+	text-align: center;
+	border-left: 1px solid #252947;
+	cursor: pointer;
+}
+.navbar li:last-child {
+	border-right: 1px solid #252947;
+}
+.navchecked {
+	background: #252947;
+	color: #e2e4ed;
+}
+.enteringUs {
+	width: 103px;
+	height: 33px;
+	margin: 13px 20px;
+	background: #38B774;
+	border-radius: 5px;
+	color: #eee;
+	float: right;
+	text-align: center;
+	line-height: 33px;
+	cursor: pointer;
+}
+/*-------
+section
+-------*/
+section {
+	width: 100%;
+	background: #fff url("../src/background.jpg") no-repeat center bottom;
+}
+.picWrapper {
+	position: relative;
+	width: auto;
+	height: auto;
+}
+.picItem {
+	width: 100%;
+	height: 460px;
+}
+.picDot {
+	position: relative;
+	bottom: 30px;
+	width: 100%;
+	text-align: center;
+	height: 0;
+}
+.picDot ul{
+	display: inline-block;
+}
+.picDot ul li {
+	width: 12px;
+	height: 12px;
+	border-radius: 6px;
+	float: left;
+	margin: 0 7px;
+	background: #999;
+	opacity: 0.5;
+}
+.picDot-checked {
+	background: #fff !important;
+	opacity: 1 !important;
+}
+.gameBar {
+	width: 100%;
+	padding: 52px 0;
+	margin-bottom: 30px;
+}
+.gameWrapper {
+	width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.gameWrapper ul {
+	left: 0px;
+	width: 2088px;
+	position: relative;
+	overflow: hidden;
+	transition: left 0.6s ease-out;
+}
+.gameWrapper ul li {
+	float: left;
+	width: 218px;
+	padding-bottom: 14px;
+	margin-right: 43px;
+}
+.gameWrapper ul li:hover {
+	transition: background 0.4s linear 0s;
+	color: #fff !important;
+	background: #38b774 !important;
+}
+.gameWrapper ul li:hover p {
+	color: #fff !important;
+}
+.gameWrapper ul li img {
+	background-color: #fff;
+	width: 218px;
+}
+.gameWrapper ul li h2 {
+	margin: 5px 0;
+	font-size: 14px;
+	font-weight: bold;
+	width: 218px;
+	text-align: center;
+	padding: 5px 0 10px 0;
+}
+.gameWrapper ul li p {
+	width: 218px;
+	font-size: 12px;
+	text-align: center;
+	color: #38b774;
+}
+.gameWrapper ul li p span {
+	font-size: 12px;
+	padding: 0 0 0 5px;
+}
+.gameDot {
+	margin: 0 auto;
+	position: relative;
+	top: 30px;
+	width: 1000px;
+	text-align: center;
+	height: 0;
+	border-top: 1px solid #dbe1e7;
+}
+.gameDot ul{
+	padding: 0 10px;
+	display: inline-block;
+	position: relative;
+	bottom: 9px;
+	background: #fff;
+}
+.gameDot ul li {
+	width: 12px;
+	height: 12px;
+	border-radius: 6px;
+	float: left;
+	margin: 0 7px;
+	background: #999;
+	opacity: 0.5;
+}
+.gameDot-checked {
+	background: #2fbc71 !important;
+	opacity: 1 !important;
+}
+.newsBar {
+	width: 1000px;
+	height: 310px;
+	margin: 0 auto;
+	padding-bottom: 57px;
+}
+.leftBar {
+	float: left;
+	width: 500px;
+	height: 310px;
+}
+.newsHeader {
+	width: 100%;
+	height: 110px;
+	box-sizing: border-box;
+	padding: 40px 216px 0 0;
+}
+.moreButtonL {
+	cursor: pointer;
+	float: right;
+	display: inline-block;
+	width: 64px;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: center;
+	height: 26px;
+	border-radius: 5px;
+	color: #30bd72;
+	border: 1px solid #33b972;
+	transition: background-color 0.2s linear 0s;
+}
+.moreButtonL sup {
+        vertical-align: super;
+        font-size: smaller;
+}
+.moreButtonL:hover {
+	background: #33b972;
+	color: #eee;
+}
+.leftBar ul {
+	padding: 0 20px;
+}
+.leftBar ul li:first-child {
+	border: 0;
+}
+.leftBar ul li {
+	padding: 9px 0;
+	border-top: 1px solid #dbe1e7;
+	font-size: 14px;
+	line-height: 29px;
+}
+.leftBar ul li span {
+	color: #afbecf;
+	font-size: 12px;
+	margin-right: 15px;
+}
+.rightBar {
+	float: left;
+	width: 500px;
+	height: 310px;
+}
+.moreButtonR {
+	float: right;
+	display: inline-block;
+	width: 64px;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: center;
+	height: 26px;
+	border-radius: 5px;
+	color: #fff;
+	border: 1px solid #fff;
+	transition: background-color 0.2s linear 0s;
+}
+.moreButtonR sup {
+        vertical-align: super;
+        font-size: smaller;
+}
+.moreButtonR:hover {
+	background: #fff;
+	color: #33b972;
+}
+.newsTitle {
+	margin: -10px 0 0 80px;
+	float: left;
+}
+.newsTitle h3 {
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+}
+.newsTitle p {
+	margin-top: 8px;
+	font-size: 12px;
+	color: #fff;
+}
+.rightTitle {
+	width: 305px;
+	padding: 0 175px 0 20px;
+	color: #fff;
+}
+.rightTitle span {
+	font-size: 16px;
+	font-weight: bold;
+}
+.rightTitle ul {
+	margin-top: 10px;
+}
+.rightTitle li {
+	font-size: 14px;
+	overflow: hidden;
+	height: 29px;
+	line-height: 29px;
+	padding: 4px 0;
+	border-bottom: 1px solid #6fdea3;
+}
+/*-------
+footer
+-------*/
+footer {
+	width: 100%;
+	background: #191D3A;
+}
+.footerWrapper {
+	width: 1000px;
+	margin: 0 auto;
+	height: 91px;
+}
+.footerNav {
+	float: left;
+	height: 91px;
+}
+.footerNav li {
+	font-size: 12px;
+	color: #6c6e7e;
+	float: left;
+	line-height: 91px;
+	cursor: pointer;
+}
+.footerNav li:first-child:after {
+	content: "|";
+	padding: 0 5px;
+}
+.copyright {
+	font-size: 12px;
+	color: #6c6e7e;
+	float: right;
+	line-height: 91px;
+}
