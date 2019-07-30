@@ -1,3 +1,6 @@
+/*-------
+game bar
+-------*/
 var gameBar = document.getElementById("gameBar");
 var gameBarDot = document.getElementById("gameBarDot");
 var gameBarState = 1;
@@ -21,9 +24,6 @@ changeGameBarDot = () => {
 		gameBarDot.children[0].classList.add("gameDot-checked");
 		gameBarDot.children[1].classList.remove("gameDot-checked");
 	}
-}
-window.onload = function() {
-	setTimeout(gameBarTimer, 4000);
 }
 gameBarTimer = () => {
 	if (gameBarTimerState == 1) {
@@ -56,3 +56,55 @@ clickToChange0 = () => {
 }
 gameBarDot.children[0].addEventListener("click", clickToChange0);
 gameBarDot.children[1].addEventListener("click", clickToChange1);
+/*-------
+banner bar
+-------*/
+var bannerBar = document.getElementById("bannerBar");
+var bannerBarDot = document.getElementById("bannerBarDot");
+var bannerBarState = 1;
+var bannerBarTimerState = 1;
+changeBannerBar = (num) => {
+	for(let i = 0; i<=3; i++) {
+		bannerBar.children[i].style.display = "none";
+	}
+	bannerBar.children[num-1].style.display = "block";
+	changeBannerBarDot(num);
+	bannerBarState = num;
+
+}
+changeBannerBarDot = (num) => {
+	for(let i = 0; i<=3; i++) {
+		bannerBarDot.children[i].className = null;
+	}
+	bannerBarDot.children[num-1].classList.add("picDot-checked");
+}
+for(let i = 0; i<=3; i++) {
+	bannerBarDot.children[i].addEventListener("click", ()=>{
+		changeBannerBar(i+1);
+	})
+}
+bannerBarTimer = () => {
+	if (bannerBarTimerState == 1) {
+		changeBannerBar(bannerBarState+1==5?1:bannerBarState+1);
+	}
+	setTimeout(bannerBarTimer, 5000);
+}
+startBannerBarTimer = () => {
+	if (bannerBarTimerState == 0) {
+		bannerBarTimerState = 1;
+	}
+}
+clearBannerBarTimer = () => {
+	if (bannerBarTimerState == 1) {
+		bannerBarTimerState = 0;
+	}
+}
+bannerBar.addEventListener("mouseover", clearBannerBarTimer);
+bannerBar.addEventListener("mouseleave", startBannerBarTimer);
+/*-------
+onload
+-------*/
+window.onload = function() {
+	setTimeout(gameBarTimer, 4000);
+	setTimeout(bannerBarTimer, 5000);
+}
