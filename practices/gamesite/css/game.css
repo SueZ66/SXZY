@@ -1,0 +1,260 @@
+/*-------
+section
+-------*/
+section {
+	width: 100%;
+}
+.banner {
+	background: #0834ad url(../src/gamebanner.jpg) repeat-x center top;
+	height: 254px;
+	width: 100%;
+}
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+.titleWrapper {
+	width: 100%;
+	height: 29px;
+	padding: 25px 0 15px;
+	border-bottom: 1px solid #c7d6e5;
+}
+.titleBox {
+	float: left;
+	background: url(../src/location.png) no-repeat 0 -94px;
+	line-height: 29px;
+	font-size: 20px;
+	color: #444866;
+	padding-left: 30px;
+	height: 29px;
+	font-weight: bold;
+}
+.navigation {
+	float: right;
+	height: 20px;
+	line-height: 20px;
+	margin-top: 4px;
+	color: #444866;
+	font-size: 12px;
+	vertical-align: middle;
+}
+.goHome {
+	float: left;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../src/home.png) no-repeat center 3px;
+}
+.iconRight {
+	float: left;
+	font-size: 10px !important;
+	padding: 0 5px;
+	color: #ddd;
+	line-height: 20px;
+}
+.content {
+	width: 100%;
+	padding: 40px 0;
+}
+aside {
+	float: left;
+	width: 195px;
+}
+aside ul li {
+	border-bottom: 1px solid #cad6e1;
+	padding-left: 52px;
+	height: 80px;
+	font-size: 16px;
+	width: 143px;
+	position: relative;
+	line-height: 80px;
+	color: #444866;
+}
+.asideChecked {
+	color: #38b774;
+}
+.asideChecked:after {
+	content: ">";
+	float: right;
+}
+.asideChecked .i-iphone {
+	background: url(../src/pad.png) no-repeat -125px 0px;
+}
+.asideChecked .i-android {
+	background: url(../src/pad.png) no-repeat -124px -97px;
+}
+.asideChecked .i-ipad {
+	background: url(../src/pad.png) no-repeat -121px -199px;
+}
+.asideChecked .i-pc {
+	background: url(../src/pad.png) no-repeat -120px -295px;
+}
+.asideChecked .i-tv {
+	background: url(../src/pad.png) no-repeat -43px -602px;
+}
+aside ul li:hover {
+	color: #38b774;
+}
+aside ul li:hover .i-iphone {
+	background: url(../src/pad.png) no-repeat -125px 0px;
+}
+aside ul li:hover .i-android {
+	background: url(../src/pad.png) no-repeat -124px -97px;
+}
+aside ul li:hover .i-ipad {
+	background: url(../src/pad.png) no-repeat -121px -199px;
+}
+aside ul li:hover .i-pc {
+	background: url(../src/pad.png) no-repeat -120px -295px;
+}
+aside ul li:hover .i-tv {
+	background: url(../src/pad.png) no-repeat -43px -602px;
+}
+aside ul li i {
+	position: absolute;
+	left: 0;
+	top: 23px;
+	height: 41px;
+	width: 34px;
+}
+.i-iphone {
+	background: url(../src/pad.png) no-repeat 0px 0px;
+}
+.i-android {
+	background: url(../src/pad.png) no-repeat -4px -97px;
+}
+.i-ipad {
+	background: url(../src/pad.png) no-repeat 0px -199px;
+}
+.i-pc {
+	background: url(../src/pad.png) no-repeat 0px -295px;
+}
+.i-tv {
+	background: url(../src/pad.png) no-repeat 0px -602px;
+}
+.itemWrapper {
+	float: right;
+	width: 757px;
+}
+.itemWrapper ul {
+	width: 110%;
+}
+.itemWrapper ul li {
+	float: left;
+	margin: 0 43px 42px 0;
+	width: 355px;
+	height: 327px;
+	border: 1px solid #cad6e1;
+	border-radius: 5px;
+	overflow: hidden;
+	text-align: center;
+	background-color: #f7f7f7;
+}
+.itemWrapper ul li:hover {
+	background-color: #ffffff;
+}
+.itemWrapper ul li h3 {
+	height: 55px;
+	padding-top: 3px;
+	line-height: 55px;
+	font-weight: normal;
+	font-size: 16px;
+	color: #444866;
+}
+.itemWrapper ul li h3:hover {
+	color: #38b774;
+}
+.itemWrapper ul li h3 span {
+	font-size: 12px;
+	color: #38b774;
+	margin-left: 14px;
+}
+.itemWrapper ul li h3 span span {
+	margin-left: 4px;
+}
+.gamePic {
+	width: 331px;
+	height: 195px;
+	overflow: hidden;
+	margin: 0 auto 20px;
+}
+.gamePic img {
+	width: 331px;
+	height: 195px;
+}
+.gamePic img:hover {
+	opacity: 0.8;
+}
+.gameLink {
+	width: 331px;
+	height: 36px;
+	margin: auto;
+}
+.appstore {
+	float: left;
+	height: 36px;
+	border-right: 1px solid #c7d6e5;
+	width: 169px;
+	text-align: center;
+}
+.appstore:hover {
+	color: #38b774;
+}
+.appstore span {
+	display: inline-block;
+	vertical-align: top;
+	height: 36px;
+	line-height: 36px;
+	padding-left: 33px;
+	font-size: 14px;
+	background: url(../src/icon.png) no-repeat 0 -347px;
+}
+.qccode {
+	float: left;
+	width: 160px;
+	height: 36px;
+	position: relative;
+}
+.qccode:hover {
+	color: #38b774;
+}
+.qccode:hover .popupCode {
+	visibility: visible;
+}
+.qccode span {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 40px;
+	line-height: 36px;
+	font-size: 14px;
+	background: url(../src/icon.png) no-repeat 0 -448px;
+}
+.popupCode {
+	visibility: hidden;
+	background: #fff;
+	box-shadow: 0 4px 0 #aaaaaaaa;
+	border-radius: 10px;
+	box-sizing: border-box;
+	padding: 16px;
+	width: 160px;
+	height: 160px;
+	position: absolute;
+	top: -170px;
+	left: -42px;
+}
+.triangle {
+	transform: rotate(45deg);
+	background: #fff;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 150px;
+	left: 73px;
+	box-shadow: 4px 4px 0 #aaaaaaaa;
+}
+.popupCode img {
+	position: relative;
+	width: 128px;
+	height: 128px;
+
+}
