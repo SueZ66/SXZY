@@ -1,0 +1,294 @@
+/*-------
+clearfix
+-------*/
+.clearfix:before,
+.clearfix:after{
+    content:" ";
+    display:table;
+}
+
+.clearfix:after{
+    clear:both;
+}
+/*-------
+body
+-------*/
+body {
+	width: 1000px;
+	margin: 0 auto;
+	background: #fffddd7a;
+}
+/*-------
+header
+-------*/
+header {
+	width: 1000px;
+	height: 79px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #999;
+}
+.logo {
+	width: 60px;
+	height: 60px;
+	margin: 10px 0;
+	border-radius: 50%;
+	background: #aaa;
+	float: left;
+}
+.icon-logo {
+	width: 60px;
+	height: 60px;
+}
+.title {
+	float: left;
+	width: 200px;
+	height: 60px;
+	margin: 10px 0 0 15px;
+}
+.title h2 {
+	width: 200px;
+	height: 26px;
+	font-size: 26px;
+	margin: 4px 0 10px; 
+	font-weight: bold;
+	color: #b67d12;
+}
+.title p {
+	height: 20px;
+	color: #d5d85c;
+	font-size: 16px;
+	line-height: 20px;
+}
+.title p span {
+	font-size: 14px;
+	color: #d5d85c;
+	font-style: italic;
+	margin-right: 10px;
+}
+.nav {
+	float: right;
+	height: 60px;
+	margin: 10px 20px;
+}
+.nav ul li {
+	list-style: none;
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.nav ul li:hover {
+	color: #aaa;
+}
+/*-------
+article
+-------*/
+article {
+	width: 1000px;
+}
+section {
+	width: 800px;
+	float: left;
+	box-sizing: border-box;
+	border-right: 1px solid #999;
+	padding: 30px 30px 0 30px;
+}
+.content {
+	width: 740px;
+	margin-bottom: 30px;
+}
+.content h2 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+	line-height: 30px;
+}
+.content h3 {
+	margin-top: 14px;
+	font-size: 14px;
+	color: #aaa;
+}
+.content h3 span {
+	font-style: italic;
+	cursor: pointer;
+}
+.content p {
+	margin-top: 16px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #333;
+}
+.content h1 {
+	margin-top: 20px;
+	font-size: 22px;
+	color: #333;
+	font-weight: bold;
+}
+.content ul {
+	margin-top: 26px;
+	list-style: disc;
+}
+.content ul li {
+	margin-left: 40px;
+	font-size: 16px;
+	line-height: 24px;
+}
+.comment {
+	width: 740px;
+	margin-bottom: 30px;
+}
+.comment h2 {
+	font-size: 20px;
+	color: #333;
+	font-weight: bold;
+}
+.comment h2 span {
+	font-weight: normal;
+}
+.comment h2 span:before {
+	content: "("
+}
+.comment h2 span:after {
+	content: ")"
+}
+.comment ul {
+	margin-top: 20px;
+}
+.comment ul li {
+	width: 740px;
+	height: 120px;
+	border-radius: 10px;
+	background: #ddd;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	padding: 20px;
+}
+.comment ul li div {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	float: left;
+	overflow: hidden;
+	box-shadow: 0 3px 2px #777; 
+	margin-right: 30px;
+}
+.comment ul li img {
+	width: 80px;
+	height: 80px;
+}
+.comment ul li h4 {
+	width: 550px;
+	float: left;
+	font-size: 16px;
+	line-height: 20px;
+	color: #333;
+	font-style: italic;
+}
+.comment ul li h4 span {
+	font-size: 14px;
+	font-style: normal;
+	color: #777;
+	padding-left: 20px;
+}
+.comment ul li p {
+	width: 550px;
+	margin-top: 20px;
+	float: left;
+	font-size: 16px;
+	line-height: 20px;
+	height: 20px;
+	overflow: hidden;
+}
+aside {
+	width: 200px;
+	float: left;
+	box-sizing: border-box;
+	padding: 30px 0 0 40px;
+}
+aside h2 {
+	font-size: 20px;
+	color: #555;
+}
+aside ul {
+	list-style: none;
+	margin-top: 24px;
+}
+aside ul li {
+	cursor: pointer;
+	color: #777;
+	line-height: 30px;
+	font-size: 14px;
+}
+aside ul li:before {
+	content: ">";
+	padding-right: 3px;
+}
+aside ul li:hover {
+	color: #aaa;
+}
+/*-------
+footer
+-------*/
+footer {
+	width: 1000px;
+}
+.footer {
+	width: 1000px;
+	height: 120px;
+	background: #555;
+	border-radius: 8px;
+	margin-bottom: 40px;
+	box-shadow: 4px 4px 2px #777777aa;
+	box-sizing: border-box;
+	padding: 20px 0;
+}
+.footer-item {
+	float: left;
+	width: 500px;
+	height: 80px;
+	box-sizing: border-box;
+	padding: 0 50px;
+
+}
+.footer-item:first-child {
+	border-right: 1px solid #eee;
+}
+.footer-item h2 {
+	font-size: 20px;
+	color: #eee;
+	margin: 15px 0 20px;
+}
+.footer-item ul {
+	list-style: none;
+	color: #ddd;
+	font-size: 14px;
+}
+.footer-item ul li {
+	float: left;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.footer-item ul li:hover {
+	color: #fff;
+}
+.footer-item p {
+	color: #ddd;
+	font-size: 14px;
+	cursor: pointer;
+}
+.footer-item p:hover {
+	color: #fff;
+}
+.copyright {
+	width: 1000px;
+	height: 60px;
+	line-height: 60px;
+	text-align: right;
+	font-size: 14px;
+	padding: 0 30px;
+	box-sizing: border-box;
+	color: #999;
+	border-top: 1px solid #777;
+}
