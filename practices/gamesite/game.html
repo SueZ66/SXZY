@@ -34,75 +34,55 @@
 			<div class="content clearfix">
 				<aside>
 					<ul id="aside">
-						<li class="asideChecked"><span>iPhone<i class="i-iphone"></i></span></li>
-						<li><span>Android<i class="i-android"></i></span></li>
-						<li><span>iPad<i class="i-ipad"></i></span></li>
-						<li><span>PC<i class="i-pc"></i></span></li>
-						<li><span>TV<i class="i-tv"></i></span></li>
+						<li class="asideChecked"><span>iPhone<i class="i-iphone"></i></span><span class="iconfont icon-arrLeft-fill-copy arror"></span></li>
+						<li><span>Android<i class="i-android"></i></span><span class="iconfont icon-arrLeft-fill-copy arror"></span></li>
+						<li><span>iPad<i class="i-ipad"></i></span><span class="iconfont icon-arrLeft-fill-copy arror"></span></li>
+						<li><span>PC<i class="i-pc"></i></span><span class="iconfont icon-arrLeft-fill-copy arror"></span></li>
+						<li><span>TV<i class="i-tv"></i></span><span class="iconfont icon-arrLeft-fill-copy arror"></span></li>
 					</ul>
 				</aside>
 				<div class="itemWrapper">
-					<ul class="clearfix">
-						<li>
+					<ul id="gameWrapper" class="clearfix">
+						<!-- <li>
 							<h3>斗地主<span>LANDLORDS<span class="iconfont icon-arrLeft-fill-copy"></span></h3>
 							<div class="gamePic"><img src="./src/game1.jpg" alt=""></div>
 							<div class="gameLink">
-								<div class="appstore"><span>App Store</span></div>
+								<div class="appstore"><span class="iosdownload">App Store</span></div>
 								<div class="qccode"><span>二维码下载</span>
-									<div class="popupCode"><div class="triangle"></div><img src="./src/test.png" alt=""></div></div>
-
+									<div class="popupCode"><div class="triangle"></div><img src="./src/test.png" alt=""></div>
+								</div>
 							</div>
 						</li>
 						<li>
 							<h3>斗地主<span>LANDLORDS<span class="iconfont icon-arrLeft-fill-copy"></span></h3>
 							<div class="gamePic"><img src="./src/game1.jpg" alt=""></div>
 							<div class="gameLink">
-								<div class="appstore"><span>App Store</span></div>
+								<div class="appstore"><span class="iosdownload">App Store</span></div>
 								<div class="qccode"><span>二维码下载</span>
-									<div class="popupCode"><div class="triangle"></div><img src="./src/test.png" alt=""></div></div>
-
+									<div class="popupCode"><div class="triangle"></div><img src="./src/test_sub.png" alt=""></div>
+								</div>
 							</div>
 						</li>
 						<li>
 							<h3>斗地主<span>LANDLORDS<span class="iconfont icon-arrLeft-fill-copy"></span></h3>
 							<div class="gamePic"><img src="./src/game1.jpg" alt=""></div>
 							<div class="gameLink">
-								<div class="appstore"><span>App Store</span></div>
+								<div class="appstore"><span class="iosdownload">App Store</span></div>
 								<div class="qccode"><span>二维码下载</span>
-									<div class="popupCode"><div class="triangle"></div><img src="./src/test.png" alt=""></div></div>
-
+									<div class="popupCode"><div class="triangle"></div><img src="./src/test.png" alt=""></div>
+								</div>
 							</div>
 						</li>
 						<li>
 							<h3>斗地主<span>LANDLORDS<span class="iconfont icon-arrLeft-fill-copy"></span></h3>
 							<div class="gamePic"><img src="./src/game1.jpg" alt=""></div>
 							<div class="gameLink">
-								<div class="appstore"><span>App Store</span></div>
+								<div class="appstore"><span class="iosdownload">App Store</span></div>
 								<div class="qccode"><span>二维码下载</span>
-									<div class="popupCode"><div class="triangle"></div><img src="./src/test.png" alt=""></div></div>
-
+									<div class="popupCode"><div class="triangle"></div><img src="./src/test.png" alt=""></div>
+								</div>
 							</div>
-						</li>
-						<li>
-							<h3>斗地主<span>LANDLORDS<span class="iconfont icon-arrLeft-fill-copy"></span></h3>
-							<div class="gamePic"><img src="./src/game1.jpg" alt=""></div>
-							<div class="gameLink">
-								<div class="appstore"><span>App Store</span></div>
-								<div class="qccode"><span>二维码下载</span>
-									<div class="popupCode"><div class="triangle"></div><img src="./src/test_sub.png" alt=""></div></div>
-
-							</div>
-						</li>
-						<li>
-							<h3>斗地主<span>LANDLORDS<span class="iconfont icon-arrLeft-fill-copy"></span></h3>
-							<div class="gamePic"><img src="./src/game1.jpg" alt=""></div>
-							<div class="gameLink">
-								<div class="appstore"><span>App Store</span></div>
-								<div class="qccode"><span>二维码下载</span>
-									<div class="popupCode"><div class="triangle"></div><img src="./src/test.png" alt=""></div></div>
-
-							</div>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</div>
@@ -120,20 +100,87 @@
 	<div class="toTop" onclick="window.scrollTo(0,0)"><span class="iconfont icon-icon-up"></span>TOP</div>
 </body>
 <script>
-	var aside = document.getElementById("aside");
-	changeAside = (event) => {
-		for(let i = 0; i<aside.childElementCount; i++) {
-			aside.children[i].className = null;
-		}
-		let target = event.target;
-		if(target.tagName=="LI") {
-			target.classList.add("asideChecked");
-		}if (target.tagName=="I"||target.tagName=="SPAN") {
-			target.parentNode.classList.add("asideChecked");
-		}
+	window.onload = () => {
+		changeGameDate();
 	}
+	var asideState = 0;
+	var aside = document.getElementById("aside");
+	var gameWrapper = document.getElementById("gameWrapper");
 	for(let i = 0; i<aside.childElementCount; i++) {
-		aside.children[i].addEventListener("click", changeAside);
+		aside.children[i].addEventListener("click", ()=>{
+			for(let i = 0; i<aside.childElementCount; i++) {
+				aside.children[i].classList.remove("asideChecked");
+			}
+			aside.children[i].classList.add("asideChecked");
+			asideState = i;
+			changeGameDate(i);
+		});
+	}
+	var gameDate = [{
+		gameName: "斗地主",
+		gameEnglish: "LANDLORDS",
+		platform: "ios",
+		pic: "game1.jpg"
+	},{
+		gameName: "斗地主",
+		gameEnglish: "LANDLORDS",
+		platform: "ios",
+		pic: "game1.jpg"
+	},{
+		gameName: "斗地主",
+		gameEnglish: "LANDLORDS",
+		platform: "ios",
+		pic: "game1.jpg"
+	},{
+		gameName: "斗地主",
+		gameEnglish: "LANDLORDS",
+		platform: "ios",
+		pic: "game1.jpg"
+	},{
+		gameName: "斗地主",
+		gameEnglish: "LANDLORDS",
+		platform: "android",
+		pic: "game2.jpg"
+	},{
+		gameName: "斗地主",
+		gameEnglish: "LANDLORDS",
+		platform: "android",
+		pic: "game2.jpg"
+	},{
+		gameName: "斗地主",
+		gameEnglish: "LANDLORDS",
+		platform: "android",
+		pic: "game2.jpg"
+	}]
+	changeGameDate = (i) => {
+		let gameInner = gameDate.filter((element)=>{
+			let platform;
+			switch(i) {
+				case 0:
+					platform = "ios";
+					break;
+				case 1:
+				 	platform = "android";
+					break;
+				default:
+					platform = "ios";
+					break;
+			}
+			return element.platform == platform;
+		})
+		let gameInnerHTML = gameInner.map((element)=>{
+			return ("<li>" +
+				"<h3>"+element.gameName+"<span>"+element.gameEnglish+"<span class='iconfont icon-arrLeft-fill-copy'></span></h3>" +
+				"<div class='gamePic'><img src='./src/"+element.pic+"' alt='pic'></div>" +
+				"<div class='gameLink'>" +
+					"<div class='appstore'><span class='"+element.platform+"download'>"+(platformDownload = element.platform == "ios"?"App store":"android 下载")+"</span></div>" +
+					"<div class='qccode'><span>二维码下载</span>" +
+						"<div class='popupCode'><div class='triangle'></div><img src='./src/test.png' alt='pic'></div>" +
+					"</div>" +
+				"</div>" +
+			"</li>")
+		})
+		gameWrapper.innerHTML = gameInnerHTML.join("");
 	}
 </script>
 </html>

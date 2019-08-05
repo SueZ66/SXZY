@@ -29,7 +29,7 @@ gameBarTimer = () => {
 	if (gameBarTimerState == 1) {
 		changeGameBar();
 	}
-	setTimeout(gameBarTimer, 4000);
+	setTimeout(gameBarTimer, 6000);
 }
 startGameBarTimer = () => {
 	if (gameBarTimerState == 0) {
@@ -105,6 +105,6 @@ bannerBar.addEventListener("mouseleave", startBannerBarTimer);
 onload
 -------*/
 window.onload = function() {
-	setTimeout(gameBarTimer, 4000);
+	setTimeout(gameBarTimer, 6000);
 	setTimeout(bannerBarTimer, 5000);
 }

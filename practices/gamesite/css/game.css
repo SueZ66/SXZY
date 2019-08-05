@@ -73,9 +73,13 @@ aside ul li {
 .asideChecked {
 	color: #38b774;
 }
-.asideChecked:after {
-	content: ">";
+.arror {
+	display: none;
+}
+.asideChecked .arror {
 	float: right;
+	font-size: 12px;
+	display: inline-block;
 }
 .asideChecked .i-iphone {
 	background: url(../src/pad.png) no-repeat -125px 0px;
@@ -207,7 +211,13 @@ aside ul li i {
 	line-height: 36px;
 	padding-left: 33px;
 	font-size: 14px;
-	background: url(../src/icon.png) no-repeat 0 -347px;
+	background: url(../src/icon.png) no-repeat;
+}
+.iosdownload {
+	background-position: 0 -347px !important;
+}
+.androiddownload {
+	background-position: 0 -546px !important;
 }
 .qccode {
 	float: left;
