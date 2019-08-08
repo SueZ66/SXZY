@@ -6,6 +6,7 @@ $().ready(()=>{
 	addToTrolley();
 	doSettleAccount();
 	exitSettleAccount();
+	settleChecked();
 })
 /*
 * param: key, name, prize, img
@@ -308,18 +309,25 @@ doUpdataSettle = () => {
 			return html;
 		})
 	})
+}
+
+updataCount = () => {
 	$("#selectedTotalCount").empty().html(()=>{
 		let count = 0;
-		trolleyState.data.map((e)=>{
-			count += e.number;
-		})
+		$("#settle-body").children().map((index,element)=>{
+			if ($(element).find("input[name='productCheck']").prop("checked")) {
+				count+= parseInt($(element).find(".count-input").attr("value"));
+			}
+		});
 		return count;
 	})
 	$("#selectedTotalAmount").empty().html(()=>{
 		let count = 0;
-		trolleyState.data.map((e)=>{
-			count += e.prize*e.number;
-		})
+		$("#settle-body").children().map((index,element)=>{
+			if ($(element).find("input[name='productCheck']").prop("checked")) {
+				count+= parseInt($(element).find(".cart-product-subtotal").html());
+			}
+		});
 		return count;
 	})
 }
@@ -343,3 +351,18 @@ settleOperation = () => {
 		changeTrolleyData("delete", key);
 	})
 }
+
+settleChecked = () => {
+	$("#selectAllProduct").on("click",function() {
+		if(this.checked) {
+			$("#settle-body input[name='productCheck']").prop("checked", true);
+		}else {
+			$("#settle-body input[name='productCheck']").prop("checked", false);
+		}
+		updataCount();
+	})
+	$("#settle-body input[name='productCheck']").on("click", ()=>{
+		updataCount();
+	})
+}
+

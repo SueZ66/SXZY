@@ -370,6 +370,7 @@ article {
 	box-sizing: border-box;
 	float: left;
 	padding-left: 20px;
+	margin-bottom: 40px;
 }
 
 .content-header {
