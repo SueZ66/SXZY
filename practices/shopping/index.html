@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>shopping</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<!-- toggle overflow-hidden -->
+<body class="">
+	<header>
+		<ul class="clearfix">
+			<li>首页</li>
+			<li>品牌</li>
+			<li>设计师</li>
+			<li>联系我们</li>
+		</ul>
+	</header>
+	<div class="wrapper clearfix">
+		<aside class="clearfix">
+			<!-- toggle trolley-empty/notempty -->
+			<div class="trolley trolley-empty" id="trolley-wrapper">
+				<div class="trolley-header clearfix">
+					<h2>购物车</h2>
+					<div class="settleAccount" id="settleAccount">结账</div>
+				</div>
+				<div class="trolley-wrapper">
+					<span class="trolley-empty-box">购物车内没有物品</span>
+					<ul class="trolley-container" id="trolley">
+						<!-- trolley item -->
+
+						<li>
+							<div><img src="src/1.jpg" alt="cloth"></div>
+							<h3>针织衫</h3>
+							<span>390</span>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="category">
+				<div class="category-header">
+					<h2>类别</h2>
+				</div>
+				<div class="category-wrapper">
+					<ul class="category-container clearfix">
+						<li><input type="checkbox" name="category" value="">饰品</li>
+						<li><input type="checkbox" name="category" value="">鞋子</li>
+						<li><input type="checkbox" name="category" value="">包包</li>
+						<li><input type="checkbox" name="category" value="">衬衫</li>
+						<li><input type="checkbox" name="category" value="">外套</li>
+						<li><input type="checkbox" name="category" value="">毛衣</li>
+						<li><input type="checkbox" name="category" value="">夹克</li>
+						<li><input type="checkbox" name="category" value="">T恤</li>
+						<li><input type="checkbox" name="category" value="">珠宝</li>
+						<li><input type="checkbox" name="category" value="">裙子</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clothColor">
+				<div class="clothColor-header">
+					<h2>颜色</h2>
+				</div>
+				<div class="clothColor-wrapper">
+					<ul class="clothColor-container clearfix">
+						<li><div class="clothColor-rice"></div>米色</li>
+						<li><div class="clothColor-gray"></div>灰色</li>
+						<li><div class="clothColor-black"></div>黑色</li>
+						<li><div class="clothColor-orange"></div>橙色</li>
+						<li><div class="clothColor-blue"></div>蓝色</li>
+						<li><div class="clothColor-purple"></div>紫色</li>
+						<li><div class="clothColor-brown"></div>棕色</li>
+						<li><div class="clothColor-red"></div>红色</li>
+						<li><div class="clothColor-green"></div>绿色</li>
+						<li><div class="clothColor-white"></div>白色</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clothSize">
+				<div class="clothSize-header">
+					<h2>尺寸	</h2>
+				</div>
+				<div class="clothSize-wrapper">
+					<ul class="clothSize-container clearfix">
+						<li><input type="checkbox" name="clothSize" value="">XS</li>
+						<li><input type="checkbox" name="clothSize" value="">L</li>
+						<li><input type="checkbox" name="clothSize" value="">S</li>
+						<li><input type="checkbox" name="clothSize" value="">M</li>
+						<li><input type="checkbox" name="clothSize" value="">XL</li>
+						<li><input type="checkbox" name="clothSize" value="">XXL</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clothPrize">
+				<div class="clothPrize-header">
+					<h2>价格区间</h2>
+				</div>
+				<div class="clothPrize-wrapper">
+					<div><img src="src/price-range.png" alt="clothPrize"></div>
+				</div>
+			</div>
+		</aside>
+		<article>
+			<div class="content-header clearfix">
+				<h2>
+					<span>首页</span>
+					<span>产品列表</span>
+					<span>女士上衣</span>
+				</h2>
+				<!-- toggle layout-in-s/l -->
+				<div class="content-layout clearfix layout-in-s" id="layout-toggle">
+					<span>查看:</span>
+					<div class="content-layout-s" id="layout-in-s"></div>
+					<div class="content-layout-l" id="layout-in-l"></div>
+				</div>
+			</div>
+			<!-- toggle wrapper-in-s/l -->
+			<div class="content-wrapper wrapper-in-s clearfix" id="wrapper-toggle">
+
+				<!-- 展示项 -->
+				<div class="content-item">
+					<!-- img -->
+					<div class="content-item-pic">
+						<!-- img width/height 333/466 -->
+						<img src="src/3.jpg" alt="cloth">
+					</div>
+					<!-- s -->
+					<!-- pop up -->
+					<div class="content-item-pop">
+						<div class="content-pop-button content-s-button">加入购物车</div>
+						<div class="content-pop-button">查看详情</div>
+					</div>
+					<!-- s -->
+					<div class="content-item-s">
+						<div class="content-s-prize clearfix">
+							<h3>针织衫</h3>
+							<span>390</span>
+							<p>夏天衣服</p>
+						</div>
+						<div class="content-s-size">
+							<h3>尺寸</h3>
+							<ul class="clearfix">
+								<li>XS</li>
+								<li>S</li>
+								<li>M</li>
+								<li>L</li>
+								<li>XL</li>
+								<li>XXL</li>
+							</ul>
+						</div>
+						<div class="content-s-color">
+							<h3>颜色</h3>
+							<ul>
+								<li><div class="clothColor-blue"></div></li>
+								<li><div class="clothColor-red"></div></li>
+								<li><div class="clothColor-white"></div></li>
+								<li><div class="clothColor-green"></div></li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- l -->
+					<div class="content-item-l">
+						<div class="content-l-prize">
+							<h3>针织衫</h3>
+							<p>产品的编号：<span>6657</span></p>
+							<div><del>￥430</del>￥390</div>
+						</div>
+						<div class="content-l-size">
+							<h3>尺寸</h3>
+							<ul class="clearfix">
+								<li>XS</li>
+								<li>S</li>
+								<li>M</li>
+								<li>L</li>
+								<li>XL</li>
+								<li>XXL</li>
+							</ul>
+						</div>	
+						<div class="content-l-color">
+							<h3>颜色</h3>
+								<ul class="clearfix">
+									<li><div class="clothColor-blue"></div></li>
+									<li><div class="clothColor-red"></div></li>
+									<li><div class="clothColor-white"></div></li>
+									<li><div class="clothColor-green"></div></li>
+								</ul>
+						</div>
+						<div class="content-l-button">加入购物车</div>
+					</div>
+
+				</div>
+
+			</div>
+		</article>
+	</div>
+
+	<div class="pop-settleAccount in-shop" id="pop-settleAccount">
+		
+		<div class="cart-wrapper">
+			<div class="cart-list">
+				<table id="cartTable">
+					<thead>
+						<tr>
+							<th>
+								<label>
+									<input type="checkbox" id="selectAllProduct"> 全选
+								</label>
+							</th>
+							<th>商品</th>
+							<th>单价（￥）</th>
+							<th>数量</th>
+							<th>小计（￥）</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody id="settle-body">
+						<tr>
+							<td><input type="checkbox" name="productCheck"></td>
+							<td class="cart-product-name">
+								<img src="src/1.jpg" alt="No Image">
+								<span>针织衫</span>
+							</td>
+							<td class="cart-product-price">390</td>
+							<td class="cart-product-count">
+								<span class="reduce" id="reduce">-</span>
+								<input class="count-input" type="text" value="1">
+								<span class="add" id="add">+</span>
+							</td>
+							<td class="cart-product-subtotal">390</td>
+							<td class="cart-product-operation">
+								<span class="delete" id="delete"><div style="display:none">0</div>删除</span>
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+
+				<footer class="cart-footer" id="cartFooter">
+					<span class="fl delete-all-product" id="deleteAllProduct">删除所有商品</span>
+					<span class="fl exit" id="exit">退出购物车</span>
+					<div class="fr closing">结 算</div>
+					<div class="fr total">
+						合计：￥ <span id="selectedTotalAmount">0.00</span>
+					</div>
+					<div class="fr selected" id="selected">
+						已选商品
+						<span id="selectedTotalCount">0</span> 件
+					</div>
+				</footer>
+			</div>
+		</div>
+
+	</div>
+</body>
+<script src="plugins/jquery.js"></script>
+<script src="js/index.js"></script>
+</html>
