@@ -337,18 +337,22 @@ settleOperation = () => {
 		if (confirm("确定清空购物车么？")) {
 			changeTrolleyData("clear")
 		}
+		updataCount();
 	})
 	$("#settle-body").on("click",".add",function() {
 		let key = $(this).parents("tr").find(".delete div").html();
 		changeTrolleyData("addnumber", key);
+		updataCount();
 	})
 	$("#settle-body").on("click",".reduce",function() {
 		let key = $(this).parents("tr").find(".delete div").html();
 		changeTrolleyData("reducenumber", key);
+		updataCount();
 	})
 	$("#settle-body").on("click",".delete",function() {
 		let key = $(this).parents("tr").find(".delete div").html();
 		changeTrolleyData("delete", key);
+		updataCount();
 	})
 }
 
@@ -361,7 +365,7 @@ settleChecked = () => {
 		}
 		updataCount();
 	})
-	$("#settle-body input[name='productCheck']").on("click", ()=>{
+	$("#settle-body").on("click", "input[name='productCheck']", function(){
 		updataCount();
 	})
 }
