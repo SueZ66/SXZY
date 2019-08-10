@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>		
+		.div1 div{
+			width: 200px;
+			height: 200px;
+
+		}
+		.div1 div:first-of-type{
+
+			background: blue;
+		}
+		.div1 div[id]:target {
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div style="height: 500px"></div>
+		<div class="div1">
+			<ul>
+				<li><a href="#a1">1</a></li>
+				<li><a href="#a2">2</a></li>
+				<li><a href="#a3">3</a></li>
+			</ul>
+			<div id="a1"></div>
+			<div id="a2"></div>
+			<div id="a3"></div>
+		</div>	
+	<div style="height: 500px"></div>
+</body>
+</html>
