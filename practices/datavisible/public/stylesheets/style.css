@@ -113,7 +113,8 @@ ul li {
     justify-content: space-between;
 }
 
-.broken-line-left, .broken-line-right {
+.broken-line-left,
+.broken-line-right {
     flex: 1;
     display: flex;
 }
@@ -204,16 +205,16 @@ ul li {
 }
 
 .main .box {
-    background: 
-	    linear-gradient(to left, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) left top no-repeat, 
-	    linear-gradient(to bottom, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) left top no-repeat, 
-	    linear-gradient(to left, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) right top no-repeat, 
-	    linear-gradient(to bottom, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) right top no-repeat, 
-	    linear-gradient(to left, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) left bottom no-repeat, 
-	    linear-gradient(to bottom, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) left bottom no-repeat, 
-	    linear-gradient(to left, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) right bottom no-repeat,
-	    linear-gradient(to left, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) right bottom no-repeat;
-    /*background-size: 1px 20px, 20px 1px, 1px 20px, 20px 1px;*/
+    background:
+        linear-gradient(to left, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) left top no-repeat,
+        linear-gradient(to bottom, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) left top no-repeat,
+        linear-gradient(to left, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) right top no-repeat,
+        linear-gradient(to bottom, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) right top no-repeat,
+        linear-gradient(to left, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) left bottom no-repeat,
+        linear-gradient(to bottom, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) left bottom no-repeat,
+        linear-gradient(to left, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) right bottom no-repeat,
+        linear-gradient(to left, rgba(2, 118, 220, 0.5), rgba(2, 118, 220, 0.5)) right bottom no-repeat;
+    background-size: 1px 20px, 20px 1px, 1px 20px, 20px 1px;
     border: solid 2px rgba(6, 104, 186, 0.4);
     border-radius: 3px;
     margin-top: 20px;
@@ -221,13 +222,15 @@ ul li {
     z-index: 2;
 }
 
-.main .content, .main .content {
+.main .content,
+.main .content {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.main .content .weather, .main .content .qidian {
+.main .content .weather,
+.main .content .qidian {
     flex: 1;
     margin-right: 10px;
     background: rgba(16, 15, 55, 0.2);
@@ -263,7 +266,8 @@ ul li {
     -webkit-transform: skew(-38deg, 0deg);
 }
 
-.weather .weather-top, .movie .movie-top {
+.weather .weather-top,
+.movie .movie-top {
     width: calc(100% - 80px);
     margin: auto;
     display: flex;
@@ -295,14 +299,16 @@ ul li {
     color: #05dfe1
 }
 
-.main .content .movie, .main .content .travel {
+.main .content .movie,
+.main .content .travel {
     flex: 1;
     margin-left: 10px;
     background: rgba(16, 15, 55, 0.2);
     border-radius: 3px;
 }
 
-#weatherModel, #movieModel {
+#weatherModel,
+#movieModel {
     width: 100%;
     height: 400px;
 }
@@ -311,7 +317,8 @@ ul li {
     border-bottom: solid 1px rgba(83, 157, 204, 0.4);
 }
 
-.movie .movie-top::before, .movie .movie-top::after {
+.movie .movie-top::before,
+.movie .movie-top::after {
     width: 15px;
     margin-bottom: -1px;
     content: "";
@@ -382,6 +389,7 @@ ul li {
     height: 440px;
 }
 
-.main .content .qidian, .main .content .travel {
+.main .content .qidian,
+.main .content .travel {
     margin-bottom: 20px;
 }
