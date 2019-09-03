@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>movie</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./plugins/jquery.min.js"></script>
+    <script src="./plugins/echarts.js"></script>
+    <script src="./js/option2019.js"></script>
+    <script src="./js/optionrateline.js"></script>
+    <script src="./js/optionsratenumber.js"></script>
+    <script src="./js/optiontype.js"></script>
+    <script src="./js/optionchinarate.js"></script>
+    <script src="./js/optionchinayear.js"></script>
+    <script src="./js/option2019lt5.js"></script>
+    <script src="./js/index.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <div class="header-left-broken-line"></div>
+      </div>
+      <div class="header-title">豆瓣电影数据可视化</div>
+      <div class="header-right">
+        <div class="header-right-broken-line"></div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="box clearfix">
+        <div class="content clearfix">
+          <div class="title hover" id="title1" loaded="0">
+            影评分和电影数量分析
+          </div>
+          <div class="title" id="title2" loaded="0">
+            影评分和电影数量对比分析
+          </div>
+          <div class="title" id="title3" loaded="0">
+            近十年每年发行的电影分析
+          </div>
+          <div class="title" id="title4" loaded="0">
+            2019各个国家发行的电影数量分析
+          </div>
+          <div class="title" id="title5" loaded="0">
+            近十年中国发行的电影评分
+          </div>
+          <div class="title" id="title6" loaded="0">
+            近十年中国发行的电影数量分布图
+          </div>
+          <div class="title" id="title7" loaded="0">
+            2019年评分在5分以下的电影名称
+          </div>
+        </div>
+        <div class="grabox">
+          <div
+            id="grawrapperratenumber"
+            style="width: 100%; height: 100%;"
+          ></div>
+          <div
+            id="grawrapperrateline"
+            style="width: 100%; height: 100%; display: none;"
+          ></div>
+          <div
+            id="grawrappertype"
+            style="width: 100%; height: 100%; display: none;"
+          ></div>
+          <div
+            id="grawrapper2019"
+            style="width: 100%; height: 100%; display: none;"
+          ></div>
+          <div
+            id="grawrapperratechina"
+            style="width: 100%; height: 100%; display: none;"
+          ></div>
+          <div
+            id="grawrappernumberchina"
+            style="width: 100%; height: 100%; display: none;"
+          ></div>
+          <div
+            id="grawrapperlt5"
+            style="width: 100%; height: 100%; display: none;"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript"></script>
+</html>
